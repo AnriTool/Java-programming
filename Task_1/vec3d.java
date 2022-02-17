@@ -57,14 +57,42 @@ public class vec3d {
     	return new vec3d(y*a.getZ() - z*a.getY(), x*a.getZ()-z*a.getX(),x*a.getY()-y*a.getX());
     }
     //6. методы для суммы и разности
+    
     //Методы создающие новые вектора
-    public vec3d sum(vec3d a) {
-    	return new vec3d(x+a.getX(),y+a.getY(),z+getZ());
+//    public vec3d sum(vec3d a) {
+//    	return new vec3d(x+a.getX(),y+a.getY(),z+getZ());
+//    }
+
+ // Статический метод с переменным количеством аргументов для суммы 
+    static vec3d sum(vec3d ...a){
+    	vec3d res = new vec3d();
+    	
+    	for(int i = 0; i < a.length; i++) {
+    		res.setX(res.getX() + a[i].getX());
+    		res.setY(res.getY() + a[i].getY());
+    		res.setZ(res.getZ() + a[i].getZ());
+    	}
+    	return res;
     }
     
-    public vec3d diff(vec3d a) {
-    	return new vec3d(x-a.getX(),y-a.getY(),z-a.getZ());
+//    public vec3d dif(vec3d a) {
+//    	return new vec3d(x-a.getX(),y-a.getY(),z-a.getZ());
+//    }
+    
+// Статический метод с переменным количеством аргументов для разности
+    static vec3d diff(vec3d ...a){
+    	vec3d res = new vec3d();
+    	res.setX(a[0].getX());
+		res.setY(a[0].getY());
+		res.setZ(a[0].getZ());
+    	for(int i = 1; i < a.length; i++) {
+    		res.setX(res.getX() - a[i].getX());
+    		res.setY(res.getY() - a[i].getY());
+    		res.setZ(res.getZ() - a[i].getZ());
+    	}
+    	return res;
     }
+    
     //Методы добавляющие данные из второго вектора в первый
     public void plus(vec3d a) {
     	x = x + a.getX();

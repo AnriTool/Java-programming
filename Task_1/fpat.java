@@ -15,6 +15,7 @@ public class fpat {
         
         v1.print();
         v2.print();
+        v3.print();
         
         System.out.println("Геттеры и сеттеры");
         System.out.println(v2.getX() + " " + v2.getY() + " " + v2.getZ());
@@ -29,10 +30,10 @@ public class fpat {
         v2.vecMult(v3).print();
         
         System.out.println("Сумма");
-        v2.sum(v3).print();
+        vec3d.sum(v2,v2,v2).print();
         
         System.out.println("Разность");
-        v2.diff(v3).print();
+        vec3d.diff(v2,v2,v3).print();
 
         System.out.println("Сложить");
         v2.plus(v3);

@@ -1,7 +1,7 @@
 package com.anritool.third;
 
 
-//Собственный класс с перезаписанными методами
+//РЎРѕР±СЃС‚РІРµРЅРЅС‹Р№ РєР»Р°СЃСЃ СЃ РїРµСЂРµР·Р°РїРёСЃР°РЅРЅС‹РјРё РјРµС‚РѕРґР°РјРё
 public class Char implements Comparable <Char>{
 	private Integer age;
 	private String name;
@@ -16,7 +16,7 @@ public class Char implements Comparable <Char>{
 		return name + " " + age;
 	}
 
-//Буду сравнивать просто по возрасту
+//Р‘СѓРґСѓ СЃСЂР°РІРЅРёРІР°С‚СЊ РїСЂРѕСЃС‚Рѕ РїРѕ РІРѕР·СЂР°СЃС‚Сѓ
 	@Override
 	public int compareTo(Char o) {
 		return age.compareTo(o.age);

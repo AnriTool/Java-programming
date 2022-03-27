@@ -4,14 +4,14 @@ public class Main {
 	public static void main(String[] args) {
 		MyStack stack = new MyStack();
 		
-		//Добавляю эллементы
+		//Р”РѕР±Р°РІР»СЏСЋ СЌР»Р»РµРјРµРЅС‚С‹
 		stack.add(1); stack.add(5); stack.add(2);
 		stack.add(3); stack.add(42); stack.add(42);
-		stack.remove();//Удаляю последний эллемент
+		stack.remove();//РЈРґР°Р»СЏСЋ РїРѕСЃР»РµРґРЅРёР№ СЌР»Р»РµРјРµРЅС‚
 		System.out.println(stack.toString());
 		System.out.println(stack.lessCount(5));
 		
-		//Проверяю на повторябщиеся эллементы(их нет)
+		//РџСЂРѕРІРµСЂСЏСЋ РЅР° РїРѕРІС‚РѕСЂСЏР±С‰РёРµСЃСЏ СЌР»Р»РµРјРµРЅС‚С‹(РёС… РЅРµС‚)
 		if(stack.repetitive()) {
 			System.out.println("Repetitive");
 		}
@@ -19,7 +19,7 @@ public class Main {
 			System.out.println("No repetitive");
 		}
 		
-		//Добавляю эллемент который существует, и снова проверяю на повторения
+		//Р”РѕР±Р°РІР»СЏСЋ СЌР»Р»РµРјРµРЅС‚ РєРѕС‚РѕСЂС‹Р№ СЃСѓС‰РµСЃС‚РІСѓРµС‚, Рё СЃРЅРѕРІР° РїСЂРѕРІРµСЂСЏСЋ РЅР° РїРѕРІС‚РѕСЂРµРЅРёСЏ
 		stack.add(3);
 		if(stack.repetitive()) {
 			System.out.println("Repetitive");
@@ -29,7 +29,7 @@ public class Main {
 		}
 		
 		
-		//Проверяю со своим собственным классом, где перезаписанны методы
+		//РџСЂРѕРІРµСЂСЏСЋ СЃРѕ СЃРІРѕРёРј СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј РєР»Р°СЃСЃРѕРј, РіРґРµ РїРµСЂРµР·Р°РїРёСЃР°РЅРЅС‹ РјРµС‚РѕРґС‹
 		MyStack charStack = new MyStack();
 		charStack.add(new Char("Billy" , 48));
 		charStack.add(new Char("Van" , 49));
@@ -43,7 +43,7 @@ public class Main {
 		else {
 			System.out.println("No repetitive");
 		}
-		//Удаляю один эллемент чтобы проверить правильность
+		//РЈРґР°Р»СЏСЋ РѕРґРёРЅ СЌР»Р»РµРјРµРЅС‚ С‡С‚РѕР±С‹ РїСЂРѕРІРµСЂРёС‚СЊ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ
 		charStack.remove();
 		if(charStack.repetitive()) {
 			System.out.println("Repetitive");

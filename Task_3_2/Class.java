@@ -1,6 +1,6 @@
 package com.anritool.treesetandlinkedlist;
 
-//‘обственный класс с перезаписанными методами
+//РЎРѕР±СЃС‚РІРµРЅРЅС‹Р№ РєР»Р°СЃСЃ СЃ РїРµСЂРµР·Р°РїРёСЃР°РЅРЅС‹РјРё РјРµС‚РѕРґР°РјРё
 public class Class implements Comparable <Class>{
 	private Integer age;
 	private String name;
@@ -15,7 +15,7 @@ public class Class implements Comparable <Class>{
 		return name + " " + age;
 	}
 
-//Ѓуду сравнивать по возрасту
+//Р‘СѓРґСѓ СЃСЂР°РІРЅРёРІР°С‚СЊ РїРѕ РІРѕР·СЂР°СЃС‚Сѓ
 	@Override
 	public int compareTo(Class o) {
 		return age.compareTo(o.age);

@@ -7,6 +7,20 @@ package spat;
 
 public class Shape {
 	double v;
+}
+
+class SolidOfRevolution extends Shape{
+	double radius;
+	public double getRadius() {
+		return radius;
+	}
+}
+
+class Box extends Shape{
+	public Box(double x) {
+		this.v = x*x*x;
+	}
+	
 	double used = 0;
 	public double getVolume() {
 		return v;
@@ -24,20 +38,6 @@ public class Shape {
 		return this.v - this.used;
 	}
 	
-	
-}
-
-class SolidOfRevolution extends Shape{
-	double radius;
-	public double getRadius() {
-		return radius;
-	}
-}
-
-class Box extends Shape{
-	public Box(double x) {
-		this.v = x*x*x;
-	}
 }
 
 class Pyramid extends Shape{
